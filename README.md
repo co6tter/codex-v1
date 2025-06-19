@@ -1,5 +1,18 @@
-# codex-v1
+# Codex Portfolio
 
-## Note
+This project is a simple portfolio website built with Next.js and Tailwind CSS.
 
-- sample
+## Getting Started
+
+Install dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Run lint checks:
+
+```bash
+npm run lint
+```

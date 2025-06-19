@@ -1,5 +1,10 @@
 # codex-v1
 
-## Note
+This is a simple Next.js portfolio site showcasing a few sample projects.
 
-- sample
+## Scripts
+
+- `npm run dev` - start development server (uses Next.js with experimental TurboPack)
+- `npm run build` - build the application
+- `npm run start` - start the production server
+- `npm run lint` - run ESLint

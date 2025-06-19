@@ -1,5 +1,12 @@
 # codex-v1
 
-## Note
+This is a simple Next.js portfolio site.
 
-- sample
+## Development
+
+Install dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
+```

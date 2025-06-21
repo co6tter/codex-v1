@@ -2,27 +2,29 @@ export const metadata = {
   title: "Portfolio",
 };
 
+import Link from "next/link";
+
 interface Project {
   title: string;
   description: string;
-  url: string;
+  path: string;
 }
 
 const projects: Project[] = [
   {
     title: "Project Alpha",
-    description: "Example Next.js project showcasing features.",
-    url: "https://example.com/alpha",
+    description: "Blog platform built with Next.js.",
+    path: "/portfolio/alpha",
   },
   {
     title: "Project Beta",
-    description: "Another sample project using React and TypeScript.",
-    url: "https://example.com/beta",
+    description: "Browser-based puzzle game.",
+    path: "/portfolio/beta",
   },
   {
     title: "Project Gamma",
-    description: "A creative project with Tailwind CSS styling.",
-    url: "https://example.com/gamma",
+    description: "Photography portfolio with Tailwind CSS.",
+    path: "/portfolio/gamma",
   },
 ];
 
@@ -37,14 +39,9 @@ export default function PortfolioPage() {
             <p className="mb-2 text-sm text-gray-600 dark:text-gray-300">
               {project.description}
             </p>
-            <a
-              className="text-blue-600 hover:underline"
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={project.path} className="text-blue-600 hover:underline">
               View project
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

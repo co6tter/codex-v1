@@ -19,6 +19,7 @@
   - [Versioning \& Releases](#versioning--releases)
   - [CI / CD Pipeline](#cicd-pipeline)
   - [Code Review Checklist](#code-review-checklist)
+  - [Git rules](#git-rules)
   - [References](#references)
 
 ---
@@ -154,6 +155,17 @@ Configuration resides in `.github/workflows/*`.
 * [ ] No obvious security risks
 * [ ] Documentation updated
 * [ ] All TODOs resolved or tracked
+
+---
+
+## Git rules
+- ALWAYS create branches that respect **git-flow**:
+  - `feature/<slug>` for new features
+  - `bugfix/<slug>` for normal fixes
+  - `hotfix/<slug>` for urgent patches
+- Branch names MUST be ASCII-only, kebab-case.
+  - Transliterate non-ASCII (日本語→romaji) when needed.
+- When opening a PR, set an **English title**; the Japanese description can follow in the body.
 
 ---
 

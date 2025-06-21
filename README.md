@@ -1,6 +1,6 @@
 # codex-v1
 
-This is a simple Next.js portfolio site.
+This is a simple Next.js portfolio site featuring a gradient-based landing page.
 
 ## Development
 

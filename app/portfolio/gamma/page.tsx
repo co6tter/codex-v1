@@ -1,12 +1,17 @@
+import { notFound } from "next/navigation";
+import ProjectCaseStudy from "../../components/ProjectCaseStudy";
+import { getProject } from "../../data/projects";
+
+const project = getProject("gamma");
+
 export const metadata = {
-  title: "Project Gamma",
+  title: project?.title ?? "Project Gamma",
 };
 
 export default function ProjectGamma() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold">Project Gamma</h2>
-      <p>Project Gamma showcases a photography portfolio using Tailwind CSS for responsive layouts and dark mode support.</p>
-    </div>
-  );
+  if (!project) {
+    notFound();
+  }
+
+  return <ProjectCaseStudy project={project} />;
 }

@@ -13,7 +13,7 @@ const visualShell: Record<Project["slug"], string> = {
 export default function ProjectVisual({ project }: ProjectVisualProps) {
   return (
     <div
-      className={`relative aspect-[16/10] overflow-hidden rounded-lg border border-[#cfd7dd] ${visualShell[project.slug]}`}
+      className={`relative aspect-16/10 overflow-hidden rounded-lg border border-[#cfd7dd] ${visualShell[project.slug]}`}
       aria-label={`${project.title} visual preview`}
     >
       <div className="absolute inset-x-0 top-0 flex h-10 items-center gap-2 border-b border-[#cfd7dd] bg-white/75 px-4">

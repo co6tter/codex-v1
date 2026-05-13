@@ -1,12 +1,17 @@
+import { notFound } from "next/navigation";
+import ProjectCaseStudy from "../../components/ProjectCaseStudy";
+import { getProject } from "../../data/projects";
+
+const project = getProject("beta");
+
 export const metadata = {
-  title: "Project Beta",
+  title: project?.title ?? "Project Beta",
 };
 
 export default function ProjectBeta() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold">Project Beta</h2>
-      <p>Project Beta is a small browser-based puzzle game created with React and TypeScript. It focuses on gameplay mechanics and interactive animations.</p>
-    </div>
-  );
+  if (!project) {
+    notFound();
+  }
+
+  return <ProjectCaseStudy project={project} />;
 }
